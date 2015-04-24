@@ -57,7 +57,7 @@
               var  criterion=d3.select(this)
                     .attr("class");
               var dataSet=data
-                          .sort(function(a,b){return d3.ascending(a[criteria],b[criteria]);});
+                          .sort(function(a,b){return d3.ascending(a[criterion],b[criterion]);});
                 //Erase previous rows
                 d3.selectAll("tr").remove();
                  var row=d3.select("tbody");
