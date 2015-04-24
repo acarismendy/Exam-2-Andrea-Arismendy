@@ -48,8 +48,9 @@
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
         }
-        row.on("mouseover",function(d){
-          de.select(this).selectAll("td")
+        var fila=row.select("td")
+        rila.on("mouseover",function(d){
+          de.select(this)
             .text("over");
             console.log("over")
         });
