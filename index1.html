@@ -50,8 +50,9 @@
         }
         row.on("mouseover",function(d){
            
-          d3.select(this)
-            .attr("class","active");
+          d3.select(this);
+          selection.style({background-color:black})
+            
         })
         .on("mouseout",function(d){
           d3.select(this)
