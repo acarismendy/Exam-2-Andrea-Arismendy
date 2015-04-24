@@ -49,8 +49,10 @@
             row.append("td").text(data[i].G);
             
           };
+          var headers=d3.keys(data[0]);
+          console.log(headers);
           d3.selectAll("th")
-          .on("click",transform(ItemNo));
+          .on("click",transform(headers[0]));
        function transform(attrName) {
               d3.select("tbody").selectAll("tr").remove();
           
