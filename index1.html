@@ -49,10 +49,9 @@
             row.append("td").text(data[i].G);
         }
         row.on("mouseover",function(d){
-           console.log(data);
+           
           d3.select(this)
-            .attr("fill","yellow")
-            .classed("active",true);
+            .attr("class","active");
         })
         .on("mouseout",function(d){
           d3.select(this)
