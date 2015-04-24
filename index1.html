@@ -51,7 +51,8 @@
         var fila=row.selectAll("td")
         fila.on("mouseover",function(d){
           d3.select(this)
-            .style("fill","yellow");
+            .style("fill","yellow")
+            .text("over");
             console.log("over")
         });
       });
