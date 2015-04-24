@@ -40,7 +40,9 @@
         for(var i=0;i<data.length;i++){
             row.append("tr");
             row.append("td").text(data[i].ItemNo);
-            row.append("td").text(data[i].A);
+            row.append("td").text(data[i].A).on("mouseover",function(d){
+              attr("style","background-color:yellow");
+            });
             row.append("td").text(data[i].B);
             row.append("td").text(data[i].C);
             row.append("td").text(data[i].D);
@@ -48,11 +50,11 @@
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
         }
-        var fila=row.selectAll("td")
-        fila.on("mouseover",function(d){
-          d3.select("tr").selectAll("td")
-            .attr("style","background-color: yellow");
-        });
+     //   var fila=row.selectAll("td")
+      //  fila.on("mouseover",function(d){
+      //    d3.select("tr").selectAll("td")
+      //      .attr("style","background-color: yellow");
+      //  });
       });
     </script>
   </body>
