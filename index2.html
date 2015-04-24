@@ -53,7 +53,9 @@
           console.log(headers);
          var  heading=d3.selectAll("th")
                .on("click",function(d){
-                 d3.select(this).attr("style","background-color:#cccc00");
+                 d3.selectAll("th").classed("active2", false);
+                d3.select(this).selectAll("th").classed("active2",true);
+                 
               var  criterion=d3.select(this)
                     .attr("class");
               var dataSet=data
