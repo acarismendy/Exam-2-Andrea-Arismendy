@@ -35,21 +35,63 @@
     
     <script type="text/javascript">
       d3.json("data.json",function(data){
-       
-         var row=d3.select("tbody");
-         
-        for(var i=0;i<data.length;i++){
-            row.append("tr");
-            row.append("td").text(data[i].ItemNo);
-            row.append("td").text(data[i].A);
-            row.append("td").text(data[i].B);
-            row.append("td").text(data[i].C);
-            row.append("td").text(data[i].D);
-            row.append("td").text(data[i].E);
-            row.append("td").text(data[i].F);
-            row.append("td").text(data[i].G);
-            
+       function transform(attrName) {
+              d3.select("tbody").selectAll("tr").remove();
+          
+          // Header
+              var th = d3.select("thead").selectAll("th")
+                      .data(jsonToArray(data[0]))
+                    .enter().append("th")
+                      .attr("onclick", function (d, i) { return "transform('" + d[0] + "');";})
+                      .text(function(d) { return d[0]; })
+          
+          // Rows
+              var tr = d3.select("tbody").selectAll("tr")
+                      .data(data)
+                    .enter().append("tr")
+                      .sort(function (a, b) { return a == null || b == null ? 0 : stringCompare(a[attrName], b[attrName]); });
+          
+          // Cells
+              var td = tr.selectAll("td")
+                      .data(function(d) { return jsonToArray(d); })
+                    .enter().append("td")
+                      .attr("onclick", function (d, i) { return "transform('" + d[0] + "');";})
+                      .text(function(d) { return d[1]; });
+          
+          }
+          
+          function stringCompare(a, b) {
+              a = a.toLowerCase();
+              b = b.toLowerCase();
+              return a > b ? 1 : a == b ? 0 : -1;
+          }
+          
+          function jsonKeyValueToArray(k, v) {return [k, v];}
+          
+          function jsonToArray(json) {
+              var ret = new Array();
+              var key;
+              for (key in json) {
+                  if (json.hasOwnProperty(key)) {
+                      ret.push(jsonKeyValueToArray(key, json[key]));
+                  }
+              }
+              return ret;
           };
+         //var row=d3.select("tbody");
+         
+       // for(var i=0;i<data.length;i++){
+        //    row.append("tr");
+        //    row.append("td").text(data[i].ItemNo);
+        //    row.append("td").text(data[i].A);
+        //7    row.append("td").text(data[i].B);
+        //    row.append("td").text(data[i].C);
+        //    row.append("td").text(data[i].D);
+        //    row.append("td").text(data[i].E);
+        //    row.append("td").text(data[i].F);
+        //7    row.append("td").text(data[i].G);
+            
+        //  };
         
 var  heading=d3.selectAll("th")
                .on("click",function(d){
