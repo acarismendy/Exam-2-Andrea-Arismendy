@@ -48,9 +48,9 @@
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
         }
-        var fila=row.select("td")
+        var fila=row.selectAll("tr")
         fila.on("mouseover",function(d){
-          d3.selectAll("tr")
+          d3.select("td")
             .attr("style","background-color: yellow");
         });
       });
