@@ -5,8 +5,8 @@ h1, h2, h3{
   
 }
 .content{
-  	margin-left=100px;
-  	margin-top=50px;
+  	margin-left:100px;
+  	margin-top:50px;
 }
 td,tr{
 	background-color: white;
