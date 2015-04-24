@@ -36,8 +36,9 @@
     <script type="text/javascript">
       d3.json("data.json",function(data){
         console.log(data);
+         var row=d3.select("tbody")
         for(var i=0;i<data.length;i++){
-            var row=d3.select("tbody").append("tr");
+            row.append("tr");
             row.append("td").text(data[i].ItemNo);
             row.append("td").text(data[i].A);
             row.append("td").text(data[i].B);
@@ -47,6 +48,7 @@
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
         }
+        
       });
     </script>
   </body>
