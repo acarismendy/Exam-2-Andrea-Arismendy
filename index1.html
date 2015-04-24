@@ -39,11 +39,7 @@
          var row=d3.select("tbody")
         for(var i=0;i<data.length;i++){
             row.append("tr");
-            //.on("mouseover",function(d){
-            //  if(d3.select(this).classed("active")===false){
-            //    d3.select(this).attr("style","background-color:yellow");
-            //  }
-            //});
+            
             row.append("td") .text(data[i].ItemNo).attr("class",i).on("mouseover",function(d){
               d3.selectAll(function(d){return "."+i;}).attr("style","background-color:yellow");
             });
@@ -60,7 +56,12 @@
         fila.on("click",function(d){
            d3.selectAll("td").classed("active", false);
            d3.select(this).classed("active",true);
-        });
+        })
+        .on("mouseover",function(d){
+             if(d3.select(this).classed("active")===false){
+               d3.select(this).attr("style","background-color:yellow");
+              }
+            });
       });
     </script>
   </body>
