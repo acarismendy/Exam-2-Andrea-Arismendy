@@ -17,14 +17,14 @@
     <div class="content">
       <table id="spreadsheet">
         <thead>
-          <th class="tableHeading">Item No</th>
-          <th class="tableHeading">A</th>
-          <th class="tableHeading">B</th>
-          <th class="tableHeading">C</th>
-          <th class="tableHeading">D</th>
-          <th class="tableHeading">E</th>
-          <th class="tableHeading">F</th>
-          <th class="tableHeading">G</th>
+          <th class="headingItem">Item No</th>
+          <th class="headingA">A</th>
+          <th class="headingB">B</th>
+          <th class="headingC">C</th>
+          <th class="headingD">D</th>
+          <th class="headingE">E</th>
+          <th class="headingF">F</th>
+          <th class="headingG">G</th>
         </thead>
         <tbody>
           
@@ -51,8 +51,12 @@
           };
 var  heading=d3.selectAll("th")
                .on("click",function(d){
-                 d3.select(this)
-                 .attr("style","background-color:#CCCC00");
+                 //var selection=d3.select(this);
+                 //if(seleccion.classed("headingItem")===true){
+                  d3.ascending(parseFloat(a[1]), parseFloat(b[1])) ||
+                 d3.ascending(a[0], b[0])
+                  //.attr("style","background-color:#CCCC00")
+                 //}
                });     
         
      
