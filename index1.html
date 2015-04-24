@@ -74,8 +74,8 @@
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
         }
-       var fila=row.selectAll("td")
-        row.on("click",function(d){
+       var fila=row.selectAll("tr")
+        fila.on("click",function(d){
            d3.selectAll("tr").classed("active", false);
            d3.select(this).classed("active",true);
         });
