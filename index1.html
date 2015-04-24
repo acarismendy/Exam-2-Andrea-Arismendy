@@ -50,8 +50,13 @@
         }
         row.on("mouseover",function(d){
           d3.select(this)
-            .style("fill","yellow");
+            .classed("active",true);
+        })
+        .on("mouseout",function(d){
+          d3.select(this)
+          .classed("active",false);
         });
+        
       });
     </script>
   </body>
