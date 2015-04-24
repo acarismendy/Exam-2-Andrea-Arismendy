@@ -42,13 +42,18 @@
             row.append("td").text(data[i].ItemNo);
             row.append("td")
                 .text(data[i].A);
-            row.append("td").text(data[i].B));
+            row.append("td").text(data[i].B);
             row.append("td").text(data[i].C);
             row.append("td").text(data[i].D);
             row.append("td").text(data[i].E);
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
           };
+var  heading=d3.select("th")
+               .on("click",function(d){
+                 d3.select(this)
+                 .attr("style","background-color:#CCCC00");
+               });     
         
      
       });
