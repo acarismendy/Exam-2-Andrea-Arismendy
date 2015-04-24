@@ -49,8 +49,7 @@
             row.append("td").text(data[i].G);
         }
         row.on("mouseover",function(d){
-          var fila=d3.select("tr")
-            fila.selectAll("td")
+          de.select(this).selectAll("td")
             .text("over");
             console.log("over")
         });
