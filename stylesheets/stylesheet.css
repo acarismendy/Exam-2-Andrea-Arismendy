@@ -8,13 +8,13 @@ h1, h2, h3{
   	margin-left:300px;
   	margin-top:50px;
 }
-td,tr{
+/*td,tr{
 	background-color: white;
 	text-align: right;
 	vertical-align:center;
 	border-collapse: collapse;
 	border: 2px solid #E0E0E0;
-}
+}*/
 th{
   background-color: #d3d3d3;
   text-align: right;
