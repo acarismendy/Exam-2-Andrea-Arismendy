@@ -39,16 +39,16 @@
          var row=d3.select("tbody")
         for(var i=0;i<data.length;i++){
             row.append("tr");
-            row.append("td").text(data[i].ItemNo).attr("class","row"+i).on("mouseover",function(d){
-              d3.selectAll(".row"+i).attr("style","background-color:yellow");
+            row.append("td").text(data[i].ItemNo).attr("class","(row"+i+")").on("mouseover",function(d){
+              d3.selectAll(".(row"+i+")").attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].A).attr("class","row"+i);
-            row.append("td").text(data[i].B).attr("class","row"+i);
-            row.append("td").text(data[i].C).attr("class","row"+i);
-            row.append("td").text(data[i].D).attr("class","row"+i);
-            row.append("td").text(data[i].E).attr("class","row"+i);
-            row.append("td").text(data[i].F).attr("class","row"+i);
-            row.append("td").text(data[i].G).attr("class","row"+i);
+            row.append("td").text(data[i].A).attr("class","(row"+i+")");
+            row.append("td").text(data[i].B).attr("class","(row"+i+")");
+            row.append("td").text(data[i].C).attr("class","(row"+i+")");
+            row.append("td").text(data[i].D).attr("class","(row"+i+")");
+            row.append("td").text(data[i].E).attr("class","(row"+i+")");
+            row.append("td").text(data[i].F).attr("class","(row"+i+")");
+            row.append("td").text(data[i].G).attr("class","(row"+i+")");
         }
      //   var fila=row.selectAll("td")
       //  fila.on("mouseover",function(d){
