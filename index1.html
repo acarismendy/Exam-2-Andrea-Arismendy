@@ -51,6 +51,7 @@
         row.on("mouseover",function(d){
            console.log(data);
           d3.select(this)
+            .attr("fill","yellow")
             .classed("active",true);
         })
         .on("mouseout",function(d){
