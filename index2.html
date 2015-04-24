@@ -35,6 +35,20 @@
     
     <script type="text/javascript">
       d3.json("data.json",function(data){
+         var row=d3.select("tbody");
+         
+        for(var i=0;i<data.length;i++){
+            row.append("tr");
+            row.append("td").text(data[i].ItemNo);
+            row.append("td").text(data[i].A);
+            row.append("td").text(data[i].B);
+            row.append("td").text(data[i].C);
+            row.append("td").text(data[i].D);
+            row.append("td").text(data[i].E);
+            row.append("td").text(data[i].F);
+            row.append("td").text(data[i].G);
+            
+          };
        function transform(attrName) {
               d3.select("tbody").selectAll("tr").remove();
           
@@ -78,20 +92,7 @@
               }
               return ret;
           };
-         //var row=d3.select("tbody");
-         
-       // for(var i=0;i<data.length;i++){
-        //    row.append("tr");
-        //    row.append("td").text(data[i].ItemNo);
-        //    row.append("td").text(data[i].A);
-        //7    row.append("td").text(data[i].B);
-        //    row.append("td").text(data[i].C);
-        //    row.append("td").text(data[i].D);
-        //    row.append("td").text(data[i].E);
-        //    row.append("td").text(data[i].F);
-        //7    row.append("td").text(data[i].G);
-            
-        //  };
+        
         
 var  heading=d3.selectAll("th")
                .on("click",function(d){
