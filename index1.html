@@ -50,7 +50,7 @@
         }
         row.on("mouseover",function(d){
            
-          d3.select(this).style({'background-color':'black'})
+          d3.select(this).selectAll("td").style("fill","black");
             
         })
         .on("mouseout",function(d){
