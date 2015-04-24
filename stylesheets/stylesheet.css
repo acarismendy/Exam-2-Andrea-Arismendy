@@ -32,6 +32,9 @@ tr:hover {
 	width:600px;
 	
 }
-/*.active{
+.active{
 	background-color:#00ff00;
-}*/
+}
+.active2{
+	background-color:#cccc00;
+}
