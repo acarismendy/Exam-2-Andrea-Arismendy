@@ -48,7 +48,10 @@
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
         }
-        
+        row.on("mouseover",function(d){
+          d3.select(this)
+            .style("fill","yellow");
+        });
       });
     </script>
   </body>
