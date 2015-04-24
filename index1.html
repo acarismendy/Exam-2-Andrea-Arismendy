@@ -48,7 +48,7 @@
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
         }
-        var fila=row.selectAll("td")
+        var fila=row.select("td")
         fila.on("mouseover",function(d){
           d3.select("tr")
             .attr("style","background-color: yellow")
