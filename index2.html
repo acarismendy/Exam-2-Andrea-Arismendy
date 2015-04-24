@@ -36,7 +36,8 @@
     <script type="text/javascript">
       d3.json("data.json",function(data){
        
-         var row=d3.select("tbody")
+         var row=d3.select("tbody");
+         var dataset=new Array();
         for(var i=0;i<data.length;i++){
             row.append("tr");
             row.append("td").text(data[i].ItemNo);
@@ -48,15 +49,49 @@
             row.append("td").text(data[i].E);
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
+            dataset(i)=new Array();
+            dataset(i)(0)=i;
+            dataset(i)(1)=data[i].ItemNo;
+            dataset(i)(2)=data[i].A;
+            dataset(i)(3)=data[i].B;
+            dataset(i)(4)=data[i].C;
+            dataset(i)(5)=data[i].D;
+            dataset(i)(6)=data[i].E;
+            dataset(i)(7)=data[i].F;
+            dataset(i)(8)=data[i].G;
+            
           };
+          
+          
          var headers=d3.keys(data[0]);
          console.log(headers);
 var  heading=d3.selectAll("th")
                .on("click",function(d){
                  var selection=d3.select(this);
-                if(selection.classed("headingItem")===true){
-                  row.sort(function(a,b){return d3.ascending(a[0],b[0]);})
-                  //.attr("style","background-color:#CCCC00")
+                if(selection.classed("headingA")===true){
+                  var newDataSet=new Array();
+                  for(var j=0;j<data.length;j++){  
+                    for(vari=0;i<data.length;i++){
+                    var min =100000000000;
+                    var minRow=0
+                    if(dataset(i)(2)<min){
+                      min=dataset(i)(2)
+                      minRow=i;
+                    }
+                    }
+                  
+                   newDataSet(j)(0)=j;
+                   newDataSet(j)(1)=dataset(minRow)(1);
+                   newDataSet(j)(2)=dataset(minRow)(2);
+                    newDataSet(j)(3)=dataset(minRow)(3);
+                    newDataSet(j)(4)=dataset(minRow)(4);
+                    newDataSet(j)(5)=dataset(minRow)(5);
+                    newDataSet(j)(6)=dataset(minRow)(6);
+                    newDataSet(j)(7)=dataset(minRow)(7);
+                    newDataSet(j)(8)=dataset(minRow)(8);
+                    dataset(minRow)(2)=100000000000;
+                  }
+                  console.log(newDataSet);
                  }
                });     
         
