@@ -57,7 +57,7 @@
 var  heading=d3.selectAll("th")
                .on("click",function(d){
                  var selection=d3.select(this)
-                 .sort(function(a,b){(return d3.ascending(a.ItemNo,b.ItemNo));});
+                 .sort(function(a,b){(d3.ascending(a.ItemNo,b.ItemNo));});
                 
                });     
         
