@@ -35,7 +35,7 @@
     
     <script type="text/javascript">
       d3.json("data.json",function(data){
-        console.log(data);
+       
          var row=d3.select("tbody")
         for(var i=0;i<data.length;i++){
             row.append("tr");
@@ -49,6 +49,7 @@
             row.append("td").text(data[i].G);
         }
         row.on("mouseover",function(d){
+           console.log(data);
           d3.select(this)
             .classed("active",true);
         })
