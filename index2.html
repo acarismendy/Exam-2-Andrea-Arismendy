@@ -51,14 +51,17 @@
           };
          var headers=d3.keys(data[0]);
          console.log(headers);
-//var  heading=d3.selectAll("th")
-  //             .on("click",function(d){
-  //               var selection=d3.select(this);
-  //               if(selection.classed("headingItem")===true){
-  //                row.sort(function(a,b){return d3.ascending(a,b);})
-  //                //.attr("style","background-color:#CCCC00")
-  //               }
-  //             });     
+var  heading=d3.selectAll("th")
+               .on("click",function(d){
+                 var selection=d3.select(this);
+                 console.log(selection);
+                 //for(var i=0;i<data.length;i++){
+                 //if(selection===headers[i]){
+                  //row.sort(function(a,b){return d3.ascending(a,b);})
+                  //.attr("style","background-color:#CCCC00")
+                 //}
+                 //}
+               });     
         
      
       });
