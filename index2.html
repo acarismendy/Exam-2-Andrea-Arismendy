@@ -49,7 +49,7 @@
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
           };
-var  heading=d3.select("th")
+var  heading=d3.selectAll("th")
                .on("click",function(d){
                  d3.select(this)
                  .attr("style","background-color:#CCCC00");
