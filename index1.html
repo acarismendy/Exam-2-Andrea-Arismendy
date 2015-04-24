@@ -52,17 +52,17 @@
             row.append("td") .text(data[i].G);
                 
         }
-       var fila=row.selectAll("td")
+       var fila=row.selectAll("tr")
         fila.on("click",function(d){
-           d3.selectAll("td").classed("active", false);
+           d3.selectAll("tr").classed("active", false);
            d3.select(this).classed("active",true);
         })
-        row.on("mouseover",function(d){
+        .on("mouseover",function(d){
             
                d3.select(this).attr("style","background-color:yellow");
               
             })
-            row.on("mouseout",function(d){
+            .on("mouseout",function(d){
             
                d3.select(this).attr("style","background-color:white");
               
