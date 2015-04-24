@@ -45,9 +45,16 @@
                 .on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].A).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
-              d3.selectAll(".row"+i).attr("style","background-color:yellow");
-            });
+            row.append("td")
+                .text(data[i].A)
+                .attr("class",function(d,i){return "row"+i;})
+                .on("mouseover",function(d){
+                  d3.selectAll(".row"+i).attr("style","background-color:yellow");
+                })
+                .on("click",function(d){
+                  d3.select(this)
+                  .attr("style","background-color:green");
+                });
             row.append("td").text(data[i].B).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
