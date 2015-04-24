@@ -7,13 +7,12 @@ h1, h2, h3{
 .content{
   
 }
-table,td,tr{
+td,tr{
 	background-color: white;
 	text-align: right;
 	vertical-align:center;
 	border-collapse: collapse;
 	border: 2px solid #E0E0E0;
-	width:600px;
 }
 th{
   background-color= #d3d3d3;
@@ -21,4 +20,7 @@ th{
 	vertical-align:center;
 	border-collapse: collapse;
 	border: 2px solid #E0E0E0;
+}
+table{
+	width:600px;
 }
