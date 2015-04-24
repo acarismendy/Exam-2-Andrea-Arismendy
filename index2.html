@@ -54,8 +54,26 @@
          var  heading=d3.selectAll("th")
                .on("click",function(d){
                  d3.select(this).attr("style","background-color:#cccc00");
-                 //.sort(function(a,b){(d3.ascending(a.ItemNo,b.ItemNo));});
-                
+              var  criterion=d3.select(this)
+                    .attr("class");
+              var dataSet=data
+                          .sort(function(a,b){return d3.ascending(a[criteria],b[criteria]);});
+                //Erase previous rows
+                d3.selectAll("tr").remove();
+                 var row=d3.select("tbody");
+         
+                for(var i=0;i<data.length;i++){
+                    row.append("tr");
+                    row.append("td").text(c[i].ItemNo);
+                    row.append("td").text(dataSet[i].A);
+                    row.append("td").text(dataSet[i].B);
+                    row.append("td").text(dataSet[i].C);
+                    row.append("td").text(dataSet[i].D);
+                    row.append("td").text(dataSet[i].E);
+                    row.append("td").text(dataSet[i].F);
+                    row.append("td").text(dataSet[i].G);
+                    
+                  };
                });  
                
       });
