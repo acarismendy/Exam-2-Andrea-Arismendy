@@ -13,6 +13,7 @@ table,td,tr{
 	vertical-align:center;
 	border-collapse: collapse;
 	border: 2px solid #E0E0E0;
+	width:600px;
 }
 th{
   background-color= #d3d3d3;
