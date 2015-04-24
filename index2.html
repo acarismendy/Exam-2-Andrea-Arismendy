@@ -37,31 +37,20 @@
       d3.json("data.json",function(data){
        
          var row=d3.select("tbody");
-         var dataset=new Array();
+         
         for(var i=0;i<data.length;i++){
             row.append("tr");
             row.append("td").text(data[i].ItemNo);
-            row.append("td")
-                .text(data[i].A);
+            row.append("td").text(data[i].A);
             row.append("td").text(data[i].B);
             row.append("td").text(data[i].C);
             row.append("td").text(data[i].D);
             row.append("td").text(data[i].E);
             row.append("td").text(data[i].F);
             row.append("td").text(data[i].G);
-            //dataset(i)=new Array();
-            dataset(i)(0)=i;
-            dataset(i)(1)=data[i].ItemNo;
-            dataset(i)(2)=data[i].A;
-            dataset(i)(3)=data[i].B;
-            dataset(i)(4)=data[i].C;
-            dataset(i)(5)=data[i].D;
-            dataset(i)(6)=data[i].E;
-            dataset(i)(7)=data[i].F;
-            dataset(i)(8)=data[i].G;
             
           };
-          
+          console.log(data);
           
          var headers=d3.keys(data[0]);
          console.log(headers);
