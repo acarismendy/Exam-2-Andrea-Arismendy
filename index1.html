@@ -49,9 +49,9 @@
             row.append("td").text(data[i].G);
         }
         row.on("mouseover",function(d){
-          d3.selectAll("h1")
+          d3.select("tr")
             .style("fill","yellow");
-            console.log(d.keys)
+            console.log(over)
         });
       });
     </script>
