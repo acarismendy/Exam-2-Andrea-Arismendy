@@ -50,7 +50,7 @@
         }
         var fila=row.selectAll("td")
         fila.on("mouseover",function(d){
-          d3.selectAll(this)
+          d3.select(this)
             .text("over");
             console.log("over")
         });
