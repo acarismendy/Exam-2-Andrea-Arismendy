@@ -56,32 +56,9 @@
          console.log(headers);
 var  heading=d3.selectAll("th")
                .on("click",function(d){
-                 var selection=d3.select(this);
-                if(selection.classed("headingA")===true){
-                  var newDataSet=new Array();
-                  for(var j=0;j<data.length;j++){  
-                    for(vari=0;i<data.length;i++){
-                    var min =100000000000;
-                    var minRow=0
-                    if(dataset(i)(2)<min){
-                      min=dataset(i)(2)
-                      minRow=i;
-                    }
-                    }
-                  
-                   newDataSet(j)(0)=j;
-                   newDataSet(j)(1)=dataset(minRow)(1);
-                   newDataSet(j)(2)=dataset(minRow)(2);
-                    newDataSet(j)(3)=dataset(minRow)(3);
-                    newDataSet(j)(4)=dataset(minRow)(4);
-                    newDataSet(j)(5)=dataset(minRow)(5);
-                    newDataSet(j)(6)=dataset(minRow)(6);
-                    newDataSet(j)(7)=dataset(minRow)(7);
-                    newDataSet(j)(8)=dataset(minRow)(8);
-                    dataset(minRow)(2)=100000000000;
-                  }
-                  console.log(newDataSet);
-                 }
+                 var selection=d3.select(this)
+                 .sort(function(a,b){(return d3.ascending(a.ItemNo,b.ItemNo));});
+                
                });     
         
      
