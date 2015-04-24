@@ -33,7 +33,7 @@
     </div>
     
     <script type="text/javascript">
-      d3.json("http://hivelab.org/static/exam2.json",function(data){
+      d3.json("data.json",function(data){
         console.log(data);
         for(var i=0;i<data.length;i++){
             var row=d3.select("tbody").append("tr");
