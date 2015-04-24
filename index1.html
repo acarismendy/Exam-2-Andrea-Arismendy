@@ -52,7 +52,7 @@
             row.append("td") .text(data[i].G);
                 
         }
-       var fila=row.select("tr")//.selectAll("td")
+       var fila=row.selectAll("tr")//.selectAll("td")
         fila.on("click",function(d){
            d3.selectAll("tr").classed("active", false);
            d3.select(this).classed("active",true);
