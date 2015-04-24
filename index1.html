@@ -50,7 +50,7 @@
         }
         var fila=row.selectAll("td")
         fila.on("mouseover",function(d){
-          d3.selectAll("tr")
+          d3.select("td")
             .attr("style","background-color: yellow");
         });
       });
