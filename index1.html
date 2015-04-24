@@ -74,11 +74,11 @@
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
         }
-     //   var fila=row.selectAll("td")
-      //  fila.on("mouseover",function(d){
-      //    d3.select("tr").selectAll("td")
-      //      .attr("style","background-color: yellow");
-      //  });
+       var fila=row.selectAll("td")
+        fila.on("click",function(d){
+           d3.select(".active").classed("active", false);
+           d3.select(this).classed("active",true);
+        });
       });
     </script>
   </body>
