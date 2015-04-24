@@ -38,10 +38,10 @@
        
          var row=d3.select("tbody")
         for(var i=0;i<data.length;i++){
-            row.append("tr").on("mouseover",function(d){
-              d3.select("td").attr("style","background-color:yellow");
+            row.append("tr");
+            row.append("td").text(data[i].ItemNo).on("mouseover",function(d){
+              d3.selectAll("td").attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].ItemNo);
             row.append("td").text(data[i].A);
             row.append("td").text(data[i].B);
             row.append("td").text(data[i].C);
