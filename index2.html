@@ -52,10 +52,8 @@
           var headers=d3.keys(data[0]);
           console.log(headers);
          var  heading=d3.selectAll("th")
-               .on("click",function(d){
-                 
-                 
-              var  criterion=d3.select(this)
+              .on("click",function(d){
+               var  criterion=d3.select(this)
                     .attr("class");
               var dataSet=data
                           .sort(function(a,b){return d3.ascending(a[criterion],b[criterion]);});
@@ -79,8 +77,8 @@
                     row.append("td").text(dataSet[i].G).attr("class","rows");
                     
                   };
-                  d3.selectAll("th").classed("active2", false);
-                  d3.select(this).classed("active2",true);
+                 // d3.selectAll("th").classed("active2", false);
+                  //d3.select(this).classed("active2",true);
                });  
                
       });
