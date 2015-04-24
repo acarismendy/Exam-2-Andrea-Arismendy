@@ -33,5 +33,6 @@ tr:hover {
 	
 }
 .active{
-	background-color:yellow;
+	background-color:#00ff00;
+	opacity:0.7;
 }
