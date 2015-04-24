@@ -52,7 +52,11 @@
           var headers=d3.keys(data[0]);
           console.log(headers);
           d3.selectAll("th")
-          .on("click",transform(headers[0]));
+          .on("click",function(d){
+            d3.select(this)
+            .attr("style","background-color:#cccc00");
+            //transform(headers[0]));
+          }
        function transform(attrName) {
               d3.select("tbody").selectAll("tr").remove();
           
