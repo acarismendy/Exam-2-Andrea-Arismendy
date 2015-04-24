@@ -39,28 +39,31 @@
          var row=d3.select("tbody")
         for(var i=0;i<data.length;i++){
             row.append("tr");
-            row.append("td").text(data[i].ItemNo).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td")
+                .text(data[i].ItemNo)
+                .attr("class",function(d,i){return "row"+i;})
+                .on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].A).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td").text(data[i].A).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].B).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td").text(data[i].B).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].C).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td").text(data[i].C).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].D).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td").text(data[i].D).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].E).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td").text(data[i].E).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].F).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td").text(data[i].F).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
-            row.append("td").text(data[i].G).attr("class",function(d,i){return "row"+i};).on("mouseover",function(d){
+            row.append("td").text(data[i].G).attr("class",function(d,i){return "row"+i;}).on("mouseover",function(d){
               d3.selectAll(".row"+i).attr("style","background-color:yellow");
             });
         }
