@@ -51,12 +51,12 @@
           };
 var  heading=d3.selectAll("th")
                .on("click",function(d){
-                 //var selection=d3.select(this);
-                 //if(seleccion.classed("headingItem")===true){
-                  d3.ascending(parseFloat(a[1]), parseFloat(b[1])) ||
-                 d3.ascending(a[0], b[0])
+                 var selection=d3.select(this);
+                 if(seleccion.classed("headingItem")===true){
+                  row.sort(function(a,b)){d3.ascending(parseFloat(a[1]), parseFloat(b[1])) ||
+                 d3.ascending(a[0], b[0])}
                   //.attr("style","background-color:#CCCC00")
-                 //}
+                 }
                });     
         
      
