@@ -22,6 +22,9 @@ th{
 	border-collapse: collapse;
 	border: 2px solid #E0E0E0;
 }
+td: hover{
+	background-color:black;
+}
 #spreadsheet{
 	width:600px;
 	
