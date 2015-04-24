@@ -39,14 +39,14 @@
          
         for(var i=0;i<data.length;i++){
             row.append("tr");
-            row.append("td").text(data[i].ItemNo);
-            row.append("td").text(data[i].A);
-            row.append("td").text(data[i].B);
-            row.append("td").text(data[i].C);
-            row.append("td").text(data[i].D);
-            row.append("td").text(data[i].E);
-            row.append("td").text(data[i].F);
-            row.append("td").text(data[i].G);
+            row.append("td").text(data[i].ItemNo).attr("class","rows");
+            row.append("td").text(data[i].A).attr("class","rows");
+            row.append("td").text(data[i].B).attr("class","rows");
+            row.append("td").text(data[i].C).attr("class","rows");
+            row.append("td").text(data[i].D).attr("class","rows");
+            row.append("td").text(data[i].E).attr("class","rows");
+            row.append("td").text(data[i].F).attr("class","rows");
+            row.append("td").text(data[i].G).attr("class","rows");
             
           };
           var headers=d3.keys(data[0]);
@@ -61,10 +61,9 @@
                           console.log(data);
                           console.log(dataSet);
                 //Erase previous rows
-                d3.selectAll("tr").remove();
-                d3.selectAll("td").remove();
+                d3.selectAll(".rows").remove();
                  
-                 d3.selectAll("th").append("th").text(data[0]);
+                // d3.selectAll("th").append("th").text(data[0]);
                  var row=d3.select("tbody");
          
                 for(var i=0;i<dataSet.length;i++){
