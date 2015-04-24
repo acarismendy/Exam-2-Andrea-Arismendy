@@ -5,7 +5,8 @@ h1, h2, h3{
   
 }
 .content{
-  
+  	margin-left=100px;
+  	margin-top=50px;
 }
 td,tr{
 	background-color: white;
@@ -21,7 +22,7 @@ th{
 	border-collapse: collapse;
 	border: 2px solid #E0E0E0;
 }
-table{
+#spreadsheet{
 	width:600px;
-	align: center;
+	
 }
