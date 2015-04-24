@@ -75,8 +75,8 @@
             });
         }
        var fila=row.selectAll("td")
-        fila.on("click",function(d){
-           d3.select(".active").classed("active", false);
+        row.on("click",function(d){
+           d3.selectAll("tr").classed("active", false);
            d3.select(this).classed("active",true);
         });
       });
