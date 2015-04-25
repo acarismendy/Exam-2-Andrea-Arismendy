@@ -88,19 +88,20 @@
                 
         }
        var  rows=d3.selectAll("td")
-              rows.on("click",function(d){
+             
+        rows.on("mouseover",function(d){
+            
+               d3.select(this).attr("style","background-color:yellow");
+              
+            });
+           rows.on("mouseout",function(d){
+            
+               d3.select(this).attr("style","background-color:white");
+              
+            });
+             rows.on("click",function(d){
                  d3.select(this).classed('active',true);
                });  
-        //rows.on("mouseover",function(d){
-            
-          //     d3.select(this).attr("style","background-color:yellow");
-              
-           // });
-            //rows.on("mouseout",function(d){
-            
-           //    d3.select(this).attr("style","background-color:white");
-              
-            //});
       });
     </script>
   </body>
