@@ -86,9 +86,9 @@
                
         }
        
-            	var rows1=d3.selectAll("td");
+            	var rows1=d3.selectAll("tr");
              rows1.on("click",function(d){
-             	d3.selectAll("td").classed('active',false);
+             	d3.selectAll("tr").classed('active',false);
                  d3.select(this).classed('active',true);
                }) 
                .on("mouseover",function(d){
