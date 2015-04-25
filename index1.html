@@ -14,9 +14,6 @@
 		  text-align:center;
 		}
 		
-		.header{
-		  
-		}
 		.content{
 		  	margin-left:300px;
 		  	margin-top:50px;
@@ -92,7 +89,7 @@
         }
        var  rows=d3.selectAll("td")
               rows.on("click",function(d){
-                 d3.select(this).classed("active",true);
+                 d3.select(this).attr("style","background-color:green");//classed("active",true);
                });  
         rows.on("mouseover",function(d){
             
