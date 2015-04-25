@@ -45,7 +45,7 @@ tr:hover {
 	background-color:#00ff00;
 }
 .active2{
-	background-color:#cccc00;
+	background-color:#6fef78;
 }
 </style>
   </head>
@@ -93,8 +93,8 @@ tr:hover {
         }
        var fila=row.selectAll("td")//.selectAll("td")
         fila.on("click",function(d){
-           d3.selectAll("td").classed("active", false);
-           d3.select(this).classed("active",true);
+           d3.selectAll("th").classed("active2", false);
+                  d3.select(this).classed("active2",true);
         })
         .on("mouseover",function(d){
             
