@@ -89,9 +89,9 @@ tr:hover {
             row.append("td") .text(data[i].G);
                 
         }
-       var fila=row.selectAll("td")
+       var fila=row.selectAll("th")
         fila.on("click",function(d){
-           	d3.select("td").classed("active", false);
+           	d3.select("th").classed("active", false);
              	d3.select(this).classed("active",true);
         });
         fila.on("mouseover",function(d){
