@@ -89,11 +89,11 @@ tr:hover {
             row.append("td") .text(data[i].G);
                 
         }
-       var fila=row.selectAll("th")
-        fila.on("click",function(d){
-           	d3.select("th").classed("active", false);
-             	d3.select(this).classed("active",true);
-        });
+       var  heading=d3.selectAll("th")
+              .on("click",function(d){
+                  d3.selectAll("th").classed("active2", false);
+                  d3.select(this).classed("active2",true);
+               });  
         fila.on("mouseover",function(d){
             
                d3.select(this).attr("style","background-color:yellow");
