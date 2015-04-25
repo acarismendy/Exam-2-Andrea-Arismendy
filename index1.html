@@ -89,17 +89,17 @@ tr:hover {
             row.append("td") .text(data[i].G);
                 
         }
-       var  heading=d3.selectAll("th")
-              .on("click",function(d){
-                  d3.selectAll("th").classed("active2", false);
+       var  rows=d3.selectAll("td")
+              rows.on("click",function(d){
+                  d3.selectAll("td").classed("active2", false);
                   d3.select(this).classed("active2",true);
                });  
-        fila.on("mouseover",function(d){
+        rows.on("mouseover",function(d){
             
                d3.select(this).attr("style","background-color:yellow");
               
             });
-            fila.on("mouseout",function(d){
+            rows.on("mouseout",function(d){
             
                d3.select(this).attr("style","background-color:white");
               
