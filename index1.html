@@ -89,15 +89,15 @@
         }
        
             	var rows1=row.selectAll("td");
-             rows1.on("click",function(d){
-             	d3.selectAll("td").classed('active',false);
-                 d3.select(this).classed('active',true);
-               }) 
-               .on("mouseover",function(d){
+             rows1.on("mouseover",function(d){
             
                d3.select(this).attr("style","background-color:yellow");
               
             })
+            .on("click",function(d){
+             	d3.selectAll("td").classed('active',false);
+                 d3.select(this).classed('active',true);
+               }) 
             .on("mouseout",function(d){
             
                d3.select(this).attr("style","background-color:white");
