@@ -90,16 +90,16 @@ tr:hover {
                 
         }
        var  rows=d3.selectAll("td")
-              row.on("click",function(d){
-                  d3.selectAll("td").classed("active2", false);
-                  d3.select(this).classed("active2",true);
+              rows.on("click",function(d){
+                  d3.selectAll("td").classed("active", false);
+                  d3.select(this).classed("active",true);
                });  
-        row.on("mouseover",function(d){
+        rows.on("mouseover",function(d){
             
                d3.select(this).attr("style","background-color:yellow");
               
             });
-            row.on("mouseout",function(d){
+            rows.on("mouseout",function(d){
             
                d3.select(this).attr("style","background-color:white");
               
